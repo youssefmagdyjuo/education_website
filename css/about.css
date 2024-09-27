@@ -1,0 +1,167 @@
+/*============================ ATCHIVMENT =========================*/
+.atchivment{
+    margin-top: 3rem;
+}
+.atchivment__container{
+    display: grid;
+    grid-template-columns:40% 60%;
+    gap: 5rem;
+}
+.atchivment__rigth > p{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.atchivment__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+.atchivment__card{
+    text-align: center;
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    transition: var(--transition);}
+
+.atchivment__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+}
+.atchivment__icon{
+    background: var(--color-danger); 
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    }
+    .atchivment__card:nth-child(2) .atchivment__icon{
+        background: var(--color-success);
+        
+        }
+        .atchivment__card:nth-child(3) .atchivment__icon{
+            background: var(--color-primary);
+            
+            }
+            
+.atchivment__card >p{
+    margin-top: 0.8rem;
+} 
+/*============================ TEAM =========================*/
+.team{
+    background: var(--color-bg1);
+    box-shadow: 0 0 3rem inset rgba(0,0,0,0.5);
+    margin: 1rem 0 6rem;
+}
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.team__card{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition); 
+    position: relative;
+    overflow: hidden;
+
+}
+.team__card:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.team__img{
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+.team__img img{
+    filter: saturate(0);
+}
+.team__img:hover img{
+    filter: saturate(1);
+}
+.team__card h4{ 
+    margin: 1.1rem 0;
+}
+.team__card p{ 
+    color: var(--color-ligth);
+} 
+.team__social{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem ;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2rem 0 2rem rgba(0,0,0,0.3);
+    /*to apier add hidden*/
+    right: -100%;
+    transition: var(--transition);
+    overflow: hidden;
+
+}
+.team__card:hover .team__social{
+    right: 0;
+}
+.team__social a{
+    padding: 1rem;
+    transition: var(--transition);
+
+}
+
+.team__social a:hover{
+    background: var(--color-bg1);
+}
+/*============================**** MEDIA QUIRES (TABLITS)  ****=========================*/
+@media screen and (max-width:1024px ) {
+    .atchivment{
+        margin-top: 2rem;
+    }
+    .atchivment__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .atchivment__left{
+        width: 80%;
+        margin:0 auto;
+    }
+    .team__container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+    .team__card{
+        padding: 1rem;
+    }
+    
+}
+/*============================**** MEDIA QUIRES (MOBILE PHONE)  ****=========================*/
+@media screen and (max-width:600px) {
+    .atchivment__left{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .atchivment{
+        
+        padding: 4rem 0;
+    }
+    .atchivment__cards{
+        gap: 0.8rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .atchivment__card{
+        padding: 1.3rem;
+    }
+    .team__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .team__card{
+        padding: 0 0 1rem;
+    }
+}
